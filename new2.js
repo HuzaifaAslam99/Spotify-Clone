@@ -227,10 +227,16 @@ async function main() {
         // }
         // else{
         let a = song.replaceAll("%20", " ");
-        let e = a.indexOf("-");
+        // let e = a.indexOf("-");
+        // let f = a.lastIndexOf(".");
+        // let g = a.slice(e + 2, f);
+        // song_names.push(g);
+
+        let e = a.lastIndexOf("-");
         let f = a.lastIndexOf(".");
         let g = a.slice(e + 2, f);
         song_names.push(g);
+
 
         let b = a.lastIndexOf("/");
         let c = a.lastIndexOf("-");

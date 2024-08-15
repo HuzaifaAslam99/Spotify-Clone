@@ -232,16 +232,21 @@ async function main() {
         // let g = a.slice(e + 2, f);
         // song_names.push(g);
 
-        let e = a.lastIndexOf("-");
-        let f = a.lastIndexOf(".");
-        let g = a.slice(e + 2, f);
-        song_names.push(g);
-
-
         let b = a.lastIndexOf("/");
         let c = a.lastIndexOf("-");
         let d = a.slice(b + 1, c - 1);
         artist.push(d);
+
+        // let e = a.lastIndexOf("-");
+        let f = a.lastIndexOf(".");
+        let g = a.slice(c + 2, f);
+        song_names.push(g);
+
+
+        // let b = a.lastIndexOf("/");
+        // let c = a.lastIndexOf("-");
+        // let d = a.slice(b + 1, c - 1);
+        // artist.push(d);
 
         // }
 

@@ -1,0 +1,89 @@
+.playbar{
+    position: relative;
+    /* top: 180px ; */
+    top: 40px ;
+    /* background-color: red; */
+    background-color:rgb(29, 28, 28);
+    height: 70px;
+    border-radius: 30px;
+    margin: 0px 8px 0px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 30px;
+}
+.playbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 8px 0px 8px;
+}
+.playline{
+    /* width: 945px;  */
+    width: 100%;
+    /* max-width: 945px; */
+    max-width: 1450px;
+    height: 5px;
+    border: 2px solid  rgb(18, 17, 17);
+    background-color: rgb(43, 42, 42);
+    /* position: relative; */
+    border-radius: 100px;
+    cursor: pointer;
+ }
+.play-backward{
+   width: 25px;
+   cursor: pointer;
+}
+.play-forward{
+    width: 25px;
+    cursor: pointer;
+}
+.play{
+    width: 25px;
+    cursor: pointer;
+}
+
+.circle{
+    background-color: orange;
+    height: 100%;
+    background-color: white;
+    width: 0%;
+    border-radius: 100px;
+}
+.song-info{
+    position: absolute;
+    left: 40px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    /* background-color: blue; */
+    width: 23vw;
+}
+.song-time{
+    position: absolute;
+    right: 40px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.song-box{
+    background-color:rgb(29, 28, 28);
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px;
+    margin: 0px 8px 0px 4px;
+    border-radius: 10px;
+    /* height: 260px; */
+    /* height: 430px; */
+    height: 68vh;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}

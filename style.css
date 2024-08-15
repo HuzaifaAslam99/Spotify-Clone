@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    height: 100%;
+}
+.left {
+    width: 28vw;
+    position: sticky;
+    /* height: 100%; */
+    overflow-y: auto;
+    /* background-color: blue; */
+}
+.right {
+    width: 75vw;
+    overflow-y: auto;
+    /* margin-top: 8px;; */
+    /* background-color: brown; */
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    /* background: #000;   */
+    background-color: rgb(43, 42, 42);
+    /* background-color: black; */
+
+
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+     /* Color of the scrollbar handle */
+     background-color: #555;
+    /* background-color: rgb(29, 28, 28); */
+     cursor: pointer;
+     /* Rounded corners */
+    border-radius: 6px; 
+    /* Gives space around handle */
+    /* border: 3px solid #000; */
+    border: 3px solid  rgb(43, 42, 42);
+
+}
+
+.Spotifylogo{
+    width:50px;
+    /* background-color: white; */
+}
+.home{
+    margin: 8px 4px 8px 8px;
+    border-radius: 10px;
+    display: grid;
+    align-content:space-between ;
+    background-color:rgb(29, 28, 28);
+    height: 25vh;
+    /* padding: auto 0px; */
+    padding: 20px 0px;
+    /* background-color: blue; */
+    /* width: 300px; */
+}
+/* .withClose{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+} */
+.close{
+    display: none;
+}
+.home .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 50px;
+    /* border: 2px solid red; */
+    font-size: 20px;
+    padding-left: 23px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    /* width: 180px; */
+
+}
+
+.Icon {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    gap: 1px;
+}
+
+.House-Search {
+    width: 30px;
+}
+
+.Icon{
+    width: 100px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-left: 30px;
+    /* height: 50px; */
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.library{
+
+    background-color:rgb(29, 28, 28);
+    margin: 8px 4px 8px 8px;
+    border-radius: 10px;
+    padding-bottom: 9px;
+    height: 55vh;
+
+}
+.logo-library{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 150px;
+    height: 50px;
+    /* margin-left: 30px; */
+    font-family: "Roboto", sans-serif;
+    font-size: 20px
+}
+.library-ex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+    /* width: 300px; */
+    padding:0px 30px ;
+    height: 80px;
+}
+.library-ex img{
+    width: 40px;
+    /* background-color: blueviolet; */
+}
+.upper-header {
+    position: sticky;
+    /* top: 0; */
+    top: 0px;
+    /* z-index: 10; */
+    background-color: black;
+    /* background-color: red; */
+    /* height: 30px; */
+    /* border-radius: 10px; */
+    /* margin-left: 4px; */
+    padding: 8px 0px;
+}
+header{
+    /* padding-top: 20px; */
+    /* position: sticky; */
+    /* top: 8px; */
+    /* top: 0.25px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    height: 72px;
+    background-color:rgb(29, 28, 28);
+    /* margin: 8px 8px 12px 4px; */
+    /* margin: 0px 8px 12px 4px; */
+    margin: 0px 8px 0px 4px;
+    border-radius: 10px;
+}
+.Non-sticky{
+}
+.hamburger{
+    display: none;
+}
+
+.ARROW{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 110px;
+    gap: 10px;
+    margin-left: 10px;
+    /* background-color: blue; */
+
+}
+.arrow{
+    border-radius: 40px;
+    /* background-color: aqua; */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.arrow svg{
+    width: 27px;
+}
+.signin-buttons{
+    margin-right: 20px;  
+    /* border: 2px solid red; */
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.sign-up{
+  font-size: 17px;
+  font-weight: bold;
+  color:rgb(173, 177, 179);
+  cursor: pointer;
+  /* transition: font-size 0.3s, transform 0.3s; */
+ }
+ .sign-up:hover{
+  color:white;
+  /* font-size: 17.01px; */
+  transform: scale(1.05);
+ }
+.login{
+  padding: 13px 30px;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 35px;
+  background-color: white;
+}
+.Playlist-cover{
+    /* display: none; */
+}
+.PlayLists{
+    font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  /* margin-left:  var(--width); */
+  margin-left: 20px;
+  margin-top:4px;
+  /* background-color: blue; */
+}
+.Songs-container{
+    /* background-color: blue; */
+    padding: 12px 8px 8px 4px;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+
+}
+.img-container{
+  font-family: "Roboto", sans-serif;
+  /* background-color: rgb(18, 17, 17); */
+  background-color:rgb(38, 37, 37);
+  width: 175px;
+  height: 233px;
+  /* width: 180px; */
+  /* height: 240px; */
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+   align-content: center;
+   grid-row-gap:10px;
+   cursor: pointer;
+}
+/* .img-container:hover{
+
+} */
+.img-container img{
+    /* width: 150px; */
+    width: 145px;
+    border-radius: 10px;
+}
+.song-name{
+    font-size: 18px;
+    /* font-weight: bold; */
+
+}
+.artist{
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(112, 116, 118)
+}
+.Create-playlist{
+    margin: 0px 8px 10px 8px;
+    padding: 15px 20px;
+  /* background-color: rgb(31, 30, 30); */
+  /* background-color: green; */
+    background-color:rgb(48, 48, 48);
+    /* border: 2px solid red; */
+    border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+   display: grid;
+   /* justify-items: center; */
+   align-content: space-between;
+   box-sizing: border-box;
+   /* padding: 10px 0px; */
+   /* gap: 13px; */
+   height: 18vh;
+}
+.line1{
+font-size: 18px;
+font-weight: 700;
+}
+.line2{
+    font-size: 15px;
+    font-weight: 400;
+}
+.Create-playlist button{
+  font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 5px 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.download-music{
+    margin: 10px 8px 0px 8px;
+    padding: 15px 20px;
+    background-color:rgb(48, 48, 48);
+    /* border: 2px solid red; */
+    border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+   display: grid;
+   /* justify-items: center; */
+   align-content: space-between;
+   box-sizing: border-box;
+   /* gap: 13px; */
+   height: 23vh;
+   /* font-weight: bold; */
+}
+
+.Line1{
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.Line1 img{
+    width: 20px;
+}
+.Line2{
+    font-size: 12px;
+    font-weight: 400;
+}
+.Line3{
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.Line3 img{
+    width: 20px;
+}
+.Line4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    /* border: 2px solid red; */
+}
+.premium{
+    width: 120px;
+}
+.Line4 button{
+    font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 12px;
+    /* padding: 5px 10px; */
+    width: 120px;
+    height: 30px;
+}
+.left-last{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    /* background-color: rgb(18, 17, 17); */
+    background-color:rgb(29, 28, 28);
+    margin: 10px 4px 10px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 2vh ;
+    padding: 8px 25px;
+}
+
+

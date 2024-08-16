@@ -193,8 +193,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 async function getSongs() {
     // let a = await fetch("/songs/");
-    // let a = await fetch("http://127.0.0.1:51422/songs");
-    let a = await fetch("https://spotify-clone-ashy-beta.vercel.app/songs");
+    // let a = await fetch("/songs/");
+    // let songArray = ["songs/Ace of Base - Happy Nation.mp3","songs/Imagine Dragons - Believer.mp3","songs/Pharrell Williams - Happy.mp3","songs/Shubh - Cheques.mp3","songs/Shubh - Still Rollin.mp3"]
+    let a = await fetch("http://127.0.0.1:61740/songs");
+    // let a = await fetch("https://spotify-clone-ashy-beta.vercel.app/songs");
     let response = await a.text(); 
     console.log(response);
     

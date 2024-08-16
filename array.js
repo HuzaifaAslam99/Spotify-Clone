@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     parsedElement.style.alignContent = "center";
 
     parsedElement.firstElementChild.style.width = "40vh";
-
+   
     let SongName = parsedElement.children[1];
     let ArtistName = parsedElement.children[2];
     parsedElement.removeChild(parsedElement.children[1]);
@@ -34,11 +34,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const Info = document.createElement('div');
     Info.style.height = "120px";
-
     box.appendChild(Info);
+
 
     const Song_name = document.createElement('div');
     Song_name.innerHTML = SongName.innerHTML;
+
     const Artist_name = document.createElement('div');
     Artist_name.innerHTML = ArtistName.innerHTML;
 
@@ -52,11 +53,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     Info.appendChild(Artist_name);
 
     Info.style.display = "grid";
-
     Info.style.alignContent = "space-between";
 
     songElement = SongName;
-
+    console.log(songElement);
+    console.log(songElement.innerHTML);
+    
     container = parsedElement;
 
     const mediaQuery1 = window.matchMedia("(max-width: 700px)");
@@ -69,7 +71,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             Artist_name.style.fontSize = "24px";
             box.style.height = "220px";
             Info.style.height = "90px";
-            // console.log("correct")
 
         }
         else {
@@ -80,7 +81,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             Artist_name.style.fontSize = "30px";
             box.style.height = "280px";
             Info.style.height = "120px";
-            // console.log("wrong")
         }
     });
     if (mediaQuery1.matches) {
@@ -171,83 +171,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
         parsedElement.style.width = "25vh";
         parsedElement.firstElementChild.style.width = "22vh";
     }
+    // audio = new Audio(songFiles[nm]);
+
+    main(songElement)
 });
 
 
-// const fs = require("fs")
-// const path = require("path")
 
-// // import path from "path";
+function main(songElement) {
 
-// // Path to the folder containing the songs
-// const songsFolder = path.join(__dirname, 'songs');
-
-// // Read the directory
-// fs.readdir(songsFolder, (err, files) => {
-//     if (err) {
-//         console.error('Unable to scan directory:', err);
-//         return;
-//     }
-
-//     // Filter files with specific extensions (e.g., mp3, wav)
-//     const songFiles = files.filter(file => {
-//         const ext = path.extname(file).toLowerCase();
-//         return ext === '.mp3' || ext === '.wav';
-//     });
-
-//     // Log the song files
-//     console.log('Songs found:', songFiles);
-// });
-
-
-// async function getSongs() {
-//     let a = await fetch("/songs/");
-//     // let a = await fetch("http://127.0.0.1:53252/songs");
-//     let response = await a.text(); 
-//     console.log(response);
-
-//     let div = document.createElement("div");
-//     div.innerHTML = response;
-//     let f = div.getElementsByClassName("icon icon icon-mp3 icon-default");
-//     // console.log(f)
-//     let songs = [];
-
-//     for (let index = 0; index < f.length; index++) {
-//         const element = f[index];
-//         if (element.href.endsWith(".mp3")) {
-//             // let e = (element.href).indexOf("/songs");
-//             // let a = element.href.slice(e)
-//             songs.push(element.href);
-//         }
-//     }
-//     // console.log(songs);
-
-//     return songs;
-// }
-
-function main() {
     let songFiles= ["songs/Ace of Base - Happy Nation.mp3","songs/Imagine Dragons - Believer.mp3","songs/Pharrell Williams - Happy.mp3","songs/Shubh - Cheques.mp3","songs/Shubh - Still Rollin.mp3"]
-    // let songs = await getSongs();
-    // console.log(songs);
+    console.log(songFiles);
     let song_names = [];
     let artist = [];
-    // if (song==".htaccess"){
-    //     continue
-    // }
-    // else{
-    for (const i of songFiles) {
-        // let a = song.replaceAll("%20", " ");
-        let e = i.indexOf("/");
-        let f = i.indexOf("-");
-        let g = i.slice(e+1, f - 1);
-        song_names.push(g);
 
-        // let b = a.lastIndexOf("/");
-        let c = i.lastIndexOf(".");
-        let d = i.slice(f + 2, c);
-        artist.push(d);
-    }
+        for (const i of songFiles) {
 
+            let e = i.indexOf("/");
+            let f = i.indexOf("-");
+            let g = i.slice(e+1, f - 1);
+            artist.push(g);
+
+            let c = i.lastIndexOf(".");
+            let d = i.slice(f + 2, c);
+            song_names.push(d);
+        }
 
     console.log(artist)
     console.log(song_names)
@@ -255,30 +203,29 @@ function main() {
     let play = document.querySelector(".play");
 
     let song_name = songElement.innerHTML;
-    console.log(song_name);
-
-    let nm = "";
+    // console.log(song_name);
+    
+    let index;
     for (const song of song_names) {
-        if (song_name == song) {
-            nm = song_names.indexOf(song);
+        console.log(song);
+        console.log(song_name);
+        
+        if (song_name === song) {
+            index = song_names.indexOf(song);
+            console.log(song);
         }
     }
-    audio = new Audio(songFiles[nm]);
-    currentSong = songFiles[nm];
-    document.querySelector(".song-info").innerHTML = `${song_name} - ${artist[nm]}`;
+    audio = new Audio(songFiles[index]);
+    currentSong = songFiles[index];
+    document.querySelector(".song-info").innerHTML = `${song_name} - ${artist[index]}`;
 
 
     let updateInterval;
     let Blink;
-    // let update;
+
     audio.loop = true;
     function playMusic() {
-        // if (audio.currentTime/audio.duration===1){
-        //     // clearInterval(Blink)
-        //     audio.currentTime = 0;
-        //     console.log( audio.currentTime)
-        //     audio.play()
-        //    }
+
         if (audio.paused) {
             audio.play();
             play.src = "img/pause.svg";
@@ -289,7 +236,7 @@ function main() {
                 // Blink = setInterval(interval,500)
 
             });
-            Blink = setInterval(interval, 500)
+           Blink = setInterval(interval,500)
 
         } else {
             audio.pause();
@@ -314,13 +261,13 @@ function main() {
         }
     });
 
-    function interval() {
-        if (container.style.backgroundColor === "green") {
-            container.style.backgroundColor = "rgb(18, 17, 17)"
-        }
-        else {
-            container.style.backgroundColor = "green"
-        }
+    function interval(){
+    if (container.style.backgroundColor === "green"){
+        container.style.backgroundColor = "rgb(18, 17, 17)"
+    }
+    else{
+        container.style.backgroundColor = "green"
+    }
 
     }
 
@@ -363,15 +310,15 @@ function main() {
     }
 
 }
-main()
+// main()
 
 
-document.querySelector(".hamburger").addEventListener("click", () => {
-    document.querySelector(".left").style.left = "0"
+document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector(".left").style.left ="0"
     console.log("Clicked")
 })
 
-document.querySelector(".close").addEventListener("click", () => {
-    document.querySelector(".left").style.left = "-100%"
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left ="-100%"
     console.log("Clicked")
 })

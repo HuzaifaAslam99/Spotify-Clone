@@ -126,7 +126,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         Info.style.height = "70px";
     }
 
-    const mediaQuery3 = window.matchMedia("(max-width: 397px)");
+
+
+    // const mediaQuery3 = window.matchMedia("(max-width: 397px)");
+    const mediaQuery3 = window.matchMedia("(max-width: 460px)");
     mediaQuery3.addEventListener("change", (e) => {
         if (e.matches) {
             parsedElement.style.height = "30vh";

@@ -180,7 +180,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function main(songElement) {
 
-    let songFiles= ["songs/Ace of Base - Happy Nation.mp3","songs/Imagine Dragons - Believer.mp3","songs/Pharrell Williams - Happy.mp3","songs/Shubh - Cheques.mp3","songs/Shubh - Still Rollin.mp3"]
+    let songFiles= ["songs/Ace of Base - Happy Nation.mp3","songs/Imagine Dragons - Believer.mp3","songs/Pharrell Williams - Happy.mp3","songs/Shubh - Cheques.mp3","songs/Shubh - Still Rollin.mp3","songs/Clean Bandit - Rockabye.mp3","songs/Queen - We Will Rock You.mp3","songs/Alan Walker - Faded.mp3","songs/Dua Lipa - No Lie.mp3","songs/Roddy Ricch - The Box.mp3","songs/Ed Sheeran - Shape Of You.mp3"]
+
     console.log(songFiles);
     let song_names = [];
     let artist = [];

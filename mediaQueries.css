@@ -78,6 +78,16 @@
     .playbar{
         margin: 0px 30px;
     }
+    .Playlist-cover{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+        padding: 0px;
+    }
+    .PlayLists{
+        /* background-color: red; */
+    }
 }
 
 
@@ -134,6 +144,12 @@
     }
 
 
+}
+
+@media (max-width: 790px){
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 @media (max-width: 700px){
     .song-box{
@@ -380,3 +396,49 @@
         top: 10px ;
     }
 }
+ 
+/* @media (max-width: 296px){
+    .play-backward{
+      width: 15px;
+   }
+   .play-forward{
+       width: 15px;
+   }
+   .play{
+       width: 15px;
+   }
+   .song-info{
+       font-size: 7px;
+   }
+   .song-time{
+       font-size: 9px;
+   }
+   .library{
+    height: 40vh;
+    }
+    .Create-playlist button{
+          padding: 4px 10px;
+          width: 120px;
+          height: 25px;
+      }
+    .premium{
+        width: 100px;
+    }
+    .Line4 button{
+        font-size: 12px;
+        width: 100px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    .PlayLists{
+        font-size: 20px;
+      font-family: "Roboto", sans-serif;
+      margin-left:  var(--width);
+      /* margin-left: 20px; */
+      /* margin-top:4px; */
+      /* background-color: blue; */
+    /* } */
+    /* .playbar{ */
+        /* margin: 0px 30px;
+    }
+}  */

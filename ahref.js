@@ -19,13 +19,10 @@
 // const adjust = document.querySelector(".img-container");
 
 const adjust = document.querySelector(".img-container img");
-
-    // const circle = document.querySelector(".circle");
-
     const divRect = adjust.getBoundingClientRect();
 const divReact = divRect.left;
-document.documentElement.style.setProperty('--width', `${divReact}px`);
-console.log(divReact);
+// document.documentElement.style.setProperty('--width', `${divReact}px`);
+// console.log(divReact);
 
 
 const img_container = document.querySelectorAll(".img-container");

@@ -82,12 +82,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background-color: aqua; */
         padding: 0px;
     }
-    .PlayLists{
-        /* background-color: red; */
-    }
+
 }
 
 
